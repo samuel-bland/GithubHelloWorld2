@@ -1,0 +1,19 @@
+name: Linking jobs example
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  call-workflow-1:
+    uses: samuel-bland/GithubHelloWorld2/.github/workflows/hello-world.yaml@linking
+    with:
+      username: Samuel
+    secrets:
+      token: ${{ secrets.TOKEN }}
+    
+  call-workflow-2:
+    uses: samuel-bland/GithubHelloWorld2/.github/workflows/hello-world.yaml@linking
+    with:
+      username: Greg
+    secrets:
+      token: ${{ secrets.TOKEN }}

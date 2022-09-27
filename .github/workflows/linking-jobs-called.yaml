@@ -1,0 +1,20 @@
+name: Hello World
+
+on: 
+  workflow_call:
+    inputs:
+      username:
+        description: 'Who to greet'
+        required: true
+        default: 'World'
+    secrets:
+      token:
+        description: 'The greeting to use'
+        required: true
+    
+jobs: 
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World 
+        run: echo Hello ${{ inputs.username }}
