@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Linking jobs
-        run: echo "Linking jobs"
         uses: samuel-bland/GithubHelloWorld2/.github/workflows/hello-world.yaml@main
