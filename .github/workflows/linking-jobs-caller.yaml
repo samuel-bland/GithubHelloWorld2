@@ -5,14 +5,14 @@ on:
 
 jobs:
   call-workflow-1:
-    uses: samuel-bland/GithubHelloWorld2/.github/workflows/hello-world.yaml@linking
+    uses: samuel-bland/GithubHelloWorld2/.github/workflows/linking-jobs-called.yaml@linking
     with:
       username: Samuel
     secrets:
       token: ${{ secrets.TOKEN }}
     
   call-workflow-2:
-    uses: samuel-bland/GithubHelloWorld2/.github/workflows/hello-world.yaml@linking
+    uses: samuel-bland/GithubHelloWorld2/.github/workflows/linking-jobs-called.yaml@linking
     with:
       username: Greg
     secrets:
