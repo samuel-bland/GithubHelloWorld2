@@ -1,11 +1,17 @@
 name: Hello World
 
 on: 
-  workflow_dispatch:
-    
+  workflow_call:
+    inputs:
+      username: 
+        required: true
+        type: string
+
+
 jobs: 
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
-        run: echo "Hello World"
+      - name: Hello World 
+        run: echo Hello ${{ inputs.username }}
+

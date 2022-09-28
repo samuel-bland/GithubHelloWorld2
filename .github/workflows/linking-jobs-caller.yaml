@@ -4,8 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  linking-jobs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Linking jobs
-        uses: samuel-bland/GithubHelloWorld2/.github/workflows/hello-world.yaml@main
+  call-workflow-1:
+    uses: ./.github/workflows/linking-jobs-called.yaml
+    with:
+      username: Samuel
+    
+  call-workflow-2:
+    uses: ./.github/workflows/linking-jobs-called.yaml
+    with:
+      username: Greg
+
